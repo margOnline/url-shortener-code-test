@@ -1,7 +1,7 @@
 .wrapper
   %p Enter a url to shorten
 
-  = form_tag(shortener_path) 
+  = form_tag(shortener_path, remote: true )
   = text_field_tag('url', nil, size: 50)
   .button
     = submit_tag 'Shorten!'

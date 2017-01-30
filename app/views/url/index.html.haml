@@ -1,8 +1,8 @@
 .wrapper
-  %header
-    %p Enter a url to shorten
-  %form{ action: '/', method: 'post'}
-    %label{for: 'url'} url:
-    %input{type: 'text', name: 'url'}
-    %input{type: 'submit', value: 'submit'}
-  %p   
+  %p Enter a url to shorten
+
+  = form_tag(shortener_path) 
+  = text_field_tag('url', nil, size: 50)
+  .button
+    = submit_tag 'Shorten!'
+ 

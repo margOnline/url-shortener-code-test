@@ -9,4 +9,11 @@ RSpec.describe UrlController, type: :controller do
     end
   end
 
+  describe "#shorten" do
+    it "returns http success" do
+      post :shorten
+      expect(response).to have_http_status(:success)
+    end
+  end
+
 end

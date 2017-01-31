@@ -4,7 +4,12 @@
 
 body {
   font-family: 'Helvetica';
-  font-size: 14px;
+  font-size: 16px;
+  color: #556361;
+}
+input[type=submit]{
+  color: #556361;
+  font-size: 16px;
 }
 .wrapper {
   width: 60%;
@@ -12,10 +17,18 @@ body {
 }
 .button{
   margin-top: 10px;
+  padding: 10px;
 }
 .short-url{
   margin-top: 20px;
   padding: 10px;
-  border: 1px solid grey;
+  border: 1px solid #ccc;
   border-radius: 5px;
+}
+.short-url a{
+  color: #42ab9e;
+}
+#url{
+  border-radius: 5px;
+  font-size: 16px;
 }

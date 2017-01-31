@@ -1,2 +1,7 @@
-- if @response
-  $('.wrapper').append("<div class='short-url'>shortened url for #{@url} is <a href=\" #{@url} \"> #{@response} </a></div>");
+- if @response[:success]
+  $('.wrapper').append("<div class='short-url'>shortened url for #{@url} is <a href=\" #{@url} \">#{@response[:success]}</a></div>")
+- else
+  $('.wrapper').append("<div class='short-url'>#{@response[:error]}</div>");
+  
+
+

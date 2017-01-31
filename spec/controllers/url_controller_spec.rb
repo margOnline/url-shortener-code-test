@@ -30,7 +30,7 @@ RSpec.describe UrlController, type: :controller do
       
       it "assigns invalid url message" do
         post :shorten, {url: url, format: 'js'}
-        expect(assigns(:response)).to eq "invalid url supplied"
+        expect(assigns(:response)).to eq({error: "invalid url"})
       end
     end
   end

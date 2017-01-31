@@ -4,11 +4,12 @@ class UrlController < ApplicationController
   end
 
   def shorten
+    @response = {}
     @url = params[:url]
     if valid?(@url)
-      @response = UrlService.new(@url).shorten
+      @response[:success] = UrlService.new(@url).shorten
     else
-      @response = "invalid url supplied"
+      @response[:error] = "invalid url"
     end
   end
 
